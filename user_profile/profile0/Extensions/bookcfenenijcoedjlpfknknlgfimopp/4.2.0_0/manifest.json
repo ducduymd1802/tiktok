@@ -1,0 +1,81 @@
+{
+   "action": {
+      "default_icon": "assets/icon.png",
+      "default_popup": "popup/popup.html",
+      "default_title": "Easy Quiz Poly"
+   },
+   "author": "trfi",
+   "background": {
+      "service_worker": "background.js",
+      "type": "module"
+   },
+   "content_scripts": [ {
+      "exclude_matches": [ "*://*.poly.edu.vn/*cmd=outQuestionSummary*", "*://*.poly.edu.vn/*cmd=outUserResultsOverview*", "*://*.poly.edu.vn/*cmd=showPasswordForm*", "*://*.poly.edu.vn/*cmd=finishTest*", "*://*.poly.edu.vn/*&cmd=post*", "*://*.poly.edu.vn/*pmode=edit*", "*://*.poly.edu.vn/*cmd=outUserPassDetails*", "*://*.poly.edu.vn/*iltestpasswordprotectiongui*" ],
+      "js": [ "injects/lms_script.js" ],
+      "matches": [ "*://*.poly.edu.vn/*&sequence=*" ],
+      "run_at": "document_end"
+   }, {
+      "js": [ "injects/lms_start.js" ],
+      "matches": [ "*://*.poly.edu.vn/*target=tst_*", "*://*.poly.edu.vn/*cmdClass=ilobjtestgui*", "*://*.poly.edu.vn/*cmd=infoScreen*", "*://*.poly.edu.vn/*iltestevaluationgui*" ]
+   }, {
+      "js": [ "injects/lms_timeup.js" ],
+      "matches": [ "*://*.poly.edu.vn/*cmd=redirectAfterAutosave*" ]
+   }, {
+      "exclude_matches": [ "*://*.poly.edu.vn/*cmd=outUserPassDetails*" ],
+      "js": [ "injects/lms_finish.js" ],
+      "matches": [ "*://*.poly.edu.vn/*cmdClass=iltestevaluationgui*" ]
+   }, {
+      "exclude_matches": [ "*://*.poly.edu.vn/*cmd=infoScreen*" ],
+      "js": [ "injects/lms_online.js" ],
+      "matches": [ "*://*.poly.edu.vn/*baseClass=ilSAHSPresentationGUI*" ],
+      "run_at": "document_end"
+   }, {
+      "js": [ "injects/cms_quiz.js" ],
+      "matches": [ "https://cms.poly.edu.vn/courses/course*/courseware/*" ],
+      "run_at": "document_end"
+   }, {
+      "js": [ "injects/cms_get_answer_inject.js" ],
+      "matches": [ "https://cms.poly.edu.vn/courses/course*/courseware/*" ],
+      "run_at": "document_start"
+   }, {
+      "js": [ "injects/upload_script.js" ],
+      "matches": [ "*://*.poly.edu.vn/*cmd=uploadFormGD*", "*://lms-ptcd.poly.edu.vn/*cmd=uploadForm*" ]
+   }, {
+      "exclude_matches": [ "*://*.poly.edu.vn/*cmd=uploadFormGD*" ],
+      "js": [ "injects/get_file.js" ],
+      "matches": [ "*://*.poly.edu.vn/*cmdClass=ilexsubmissionfilegui*" ]
+   }, {
+      "js": [ "injects/disable_translate.js" ],
+      "matches": [ "*://*.poly.edu.vn/*" ],
+      "run_at": "document_start"
+   } ],
+   "declarative_net_request": {
+      "rule_resources": [ {
+         "enabled": true,
+         "id": "ruleset1",
+         "path": "rules.json"
+      } ]
+   },
+   "description": "Tiện ích hỗ trợ sinh viên làm bài Quiz trường Cao đẳng FPT Polytechnic",
+   "differential_fingerprint": "1.0a3e60ec482fc4eaa5230bfb306d87555b83570da614ad58a05cebaf4fdf11ab",
+   "externally_connectable": {
+      "matches": [ "*://localhost/*", "https://*.quizpoly.xyz/*" ]
+   },
+   "host_permissions": [ "*://*.poly.edu.vn/*", "http://localhost/*", "https://*.quizpoly.xyz/*" ],
+   "icons": {
+      "128": "assets/icon.png",
+      "16": "assets/icon.png",
+      "48": "assets/icon.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAo2Fh//Q4/KUkX0jv8bdwksZO2Dwag8xaLHK2DqOr4sjUqKFJbigTVpfdWrom546JNU0A3lMRYfFf8vvWRWBQMutUpiQaRUfNjIDWES1cwErdkeZ7s9LuMBxF4+oGlVtgPt8ON8NzD0ewS43s+FbDAP9UE6sZizYcq7saWEJyXUQIVCDyAcD3LlA+j4lzJUu6um0uJlRwuhzLfmHIK3+e9XZMJy+e51Y2dGbD1nn8wHGlidS8Z3phUyFdrczKTLVNRUW8YgKA2ORN28Hw8py1fYT05Ig6vFtg9Xsllt9p5khms23hZgJE7NJnzKSj1nKZAlXqGDlHV+B8p2mJ94WGdwIDAQAB",
+   "manifest_version": 3,
+   "name": "Easy Quiz Poly",
+   "permissions": [ "declarativeNetRequest", "cookies", "storage", "tabs", "notifications", "system.display", "scripting" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "4.2.0",
+   "web_accessible_resources": [ {
+      "matches": [ "https://*.quizpoly.xyz/*", "https://cms.poly.edu.vn/*" ],
+      "resources": [ "injects/cms_get_answer.js" ],
+      "use_dynamic_url": true
+   } ]
+}

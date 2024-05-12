@@ -1,0 +1,56 @@
+2022/06/15-13:49:09.833 41f4 Creating DB C:\Users\Admin\AppData\Local\Google\Chrome\User Data\Profile 6\IndexedDB\https_web.telegram.org_0.indexeddb.leveldb since it was missing.
+2022/06/15-13:49:09.836 41f4 Reusing MANIFEST C:\Users\Admin\AppData\Local\Google\Chrome\User Data\Profile 6\IndexedDB\https_web.telegram.org_0.indexeddb.leveldb/MANIFEST-000001
+2022/06/15-13:49:20.609 2c08 Level-0 table #5: started
+2022/06/15-13:49:20.622 5080 Current memtable full; waiting...
+2022/06/15-13:49:20.640 2c08 Level-0 table #5: 2697037 bytes OK
+2022/06/15-13:49:20.645 2c08 Delete type=0 #3
+2022/06/15-13:49:20.646 2c08 Level-0 table #7: started
+2022/06/15-13:49:20.658 2c08 Level-0 table #7: 2823976 bytes OK
+2022/06/15-13:49:20.661 2c08 Delete type=0 #4
+2022/06/15-13:49:31.423 4338 Compacting 1@1 + 1@2 files
+2022/06/15-13:49:31.437 4338 Generated table #8@1: 476 keys, 2130267 bytes
+2022/06/15-13:49:31.444 4338 Generated table #9@1: 372 keys, 1483450 bytes
+2022/06/15-13:49:31.444 4338 Compacted 1@1 + 1@2 files => 3613717 bytes
+2022/06/15-13:49:31.445 4338 compacted to: files[ 0 0 2 0 0 0 0 ]
+2022/06/15-13:49:31.445 4338 Delete type=2 #5
+2022/06/15-13:49:31.445 4338 Delete type=2 #7
+2022/06/15-13:56:13.976 5910 Level-0 table #11: started
+2022/06/15-13:56:13.989 5910 Level-0 table #11: 2462872 bytes OK
+2022/06/15-13:56:13.991 5910 Delete type=0 #6
+2022/06/15-14:02:56.960 4648 Compacting 1@1 + 2@2 files
+2022/06/15-14:02:56.993 4648 Generated table #12@1: 638 keys, 1867109 bytes
+2022/06/15-14:02:56.993 4648 Compacted 1@1 + 2@2 files => 1867109 bytes
+2022/06/15-14:02:56.994 4648 compacted to: files[ 0 0 1 0 0 0 0 ]
+2022/06/15-14:02:56.994 4648 Delete type=2 #8
+2022/06/15-14:02:56.994 4648 Delete type=2 #9
+2022/06/15-14:02:56.994 4648 Delete type=2 #11
+2022/06/15-15:08:43.960 38b8 Level-0 table #14: started
+2022/06/15-15:08:43.975 38b8 Level-0 table #14: 1968277 bytes OK
+2022/06/15-15:08:43.976 38b8 Delete type=0 #10
+2022/06/15-15:13:43.971 38b8 Compacting 1@1 + 1@2 files
+2022/06/15-15:13:43.986 38b8 Generated table #15@1: 639 keys, 1826111 bytes
+2022/06/15-15:13:43.986 38b8 Compacted 1@1 + 1@2 files => 1826111 bytes
+2022/06/15-15:13:43.987 38b8 compacted to: files[ 0 0 1 0 0 0 0 ]
+2022/06/15-15:13:43.987 38b8 Delete type=2 #12
+2022/06/15-15:13:43.987 38b8 Delete type=2 #14
+2022/06/15-16:22:43.962 47ec Level-0 table #17: started
+2022/06/15-16:22:43.980 47ec Level-0 table #17: 1909663 bytes OK
+2022/06/15-16:22:43.981 47ec Delete type=0 #13
+2022/06/15-16:25:02.566 2ac4 Compacting 1@1 + 1@2 files
+2022/06/15-16:25:02.585 2ac4 Generated table #18@1: 650 keys, 1828110 bytes
+2022/06/15-16:25:02.585 2ac4 Compacted 1@1 + 1@2 files => 1828110 bytes
+2022/06/15-16:25:02.585 2ac4 compacted to: files[ 0 0 1 0 0 0 0 ]
+2022/06/15-16:25:02.585 2ac4 Delete type=2 #15
+2022/06/15-16:25:02.585 2ac4 Delete type=2 #17
+2022/06/15-16:46:51.861 52cc Level-0 table #20: started
+2022/06/15-16:46:51.870 52cc Level-0 table #20: 1031977 bytes OK
+2022/06/15-16:46:51.871 52cc Delete type=0 #16
+2022/06/15-16:46:51.871 52cc Manual compaction at level-0 from (begin) .. (end); will stop at (end)
+2022/06/15-16:46:51.871 52cc Manual compaction at level-1 from (begin) .. (end); will stop at '\x00\x01\x05\x02\x01\x0b\x00-\x001\x007\x008\x009\x004\x001\x001\x000\x004\x000' @ 42486 : 1
+2022/06/15-16:46:51.871 52cc Compacting 1@1 + 1@2 files
+2022/06/15-16:46:51.884 52cc Generated table #21@1: 637 keys, 1872681 bytes
+2022/06/15-16:46:51.884 52cc Compacted 1@1 + 1@2 files => 1872681 bytes
+2022/06/15-16:46:51.885 52cc compacted to: files[ 0 0 1 0 0 0 0 ]
+2022/06/15-16:46:51.885 52cc Delete type=2 #18
+2022/06/15-16:46:51.885 52cc Delete type=2 #20
+2022/06/15-16:46:51.885 52cc Manual compaction at level-1 from '\x00\x01\x05\x02\x01\x0b\x00-\x001\x007\x008\x009\x004\x001\x001\x000\x004\x000' @ 42486 : 1 .. (end); will stop at (end)

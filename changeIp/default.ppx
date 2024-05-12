@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ProxifierProfile version="101" platform="Windows" product_id="0" product_minver="310">
+  <Options>
+    <Resolve>
+      <AutoModeDetection enabled="true" />
+      <ViaProxy enabled="false">
+        <TryLocalDnsFirst enabled="false" />
+      </ViaProxy>
+      <ExclusionList>%ComputerName%; localhost; *.local</ExclusionList>
+    </Resolve>
+    <Encryption mode="basic" />
+    <HttpProxiesSupport enabled="false" />
+    <HandleDirectConnections enabled="false" />
+    <ConnectionLoopDetection enabled="true" />
+    <ProcessServices enabled="true" />
+    <ProcessOtherUsers enabled="true" />
+  </Options>
+  <ProxyList>
+    <Proxy id="100" type="HTTPS">
+      <Address>{my_proxy}</Address>
+      <Port>{my_port}</Port>
+      <Options>48</Options>
+    </Proxy>
+  </ProxyList>
+  <ChainList />
+  <RuleList>
+    <Rule enabled="true">
+      <Name>Localhost</Name>
+      <Targets>localhost; 127.0.0.1; %ComputerName%; *tinsoftsv.com</Targets>
+      <Action type="Direct" />
+    </Rule>
+    <Rule enabled="{my_setting1}">
+      <Name>mysetting</Name>
+      <Applications>{my_setting2}</Applications>
+      <Action type="Proxy">100</Action>
+    </Rule>
+    <Rule enabled="true">
+      <Name>Default</Name>
+      {my_setting3}
+    </Rule>
+  </RuleList>
+</ProxifierProfile>
